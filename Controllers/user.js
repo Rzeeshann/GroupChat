@@ -46,7 +46,7 @@ exports.signup = (req,res,next)=>{
                     res.status(400).json({message:'Something Went Wrong'})
                 }
                 if(result === true){
-                    res.status(200).json({message:'Successfully logged in', success:true, token:generateToken(user[0].id)})
+                    res.status(200).json({message:'Successfully logged in', success:true, token:generateToken(user[0].id),user:user})
                 } 
                 
                 else {

@@ -19,6 +19,7 @@ function createUser(event){
         console.log(result);
         if(result.status == 201) {
             alert("Successfully Signed up")
+            window.location.href="./login.html"
         }else{
             throw new Error("Failed to Signup")
         }
